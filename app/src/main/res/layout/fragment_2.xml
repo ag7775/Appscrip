@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shivam.kotlin.appscriptask.ui.screens.Fragment2"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="question"
+            type="com.shivam.kotlin.appscriptask.modal.Question" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/question_2_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{question.question}"
+            android:textSize="22dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintBottom_toTopOf="@id/answer_2_rg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <RadioGroup
+            android:id="@+id/answer_2_rg"
+            app:layout_constraintTop_toBottomOf="@id/question_2_text"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/next_2"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/option_1_ques_2"
+                android:text="@{question.option1}"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/option_2_ques_2"
+                android:text="@{question.option2}"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/option_3_ques_2"
+                android:text="@{question.option3}"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/option_4_ques_2"
+                android:text="@{question.option4}"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/next_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/answer_2_rg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

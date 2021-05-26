@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.shivam.kotlin.appscriptask.ui.screens.Fragment1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/question_1_text"
+        android:layout_width="wrap_content"
+        android:text="What is your name?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="24dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/answer_1_et"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/answer_1_et"
+        android:layout_width="0dp"
+        android:layout_marginTop="16dp"
+        android:hint="Enter your name"
+        android:imeOptions="actionDone"
+        android:gravity="center"
+        android:maxLines="1"
+        android:inputType="textCapSentences"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/question_1_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/next_1"
+        android:layout_width="wrap_content"
+        android:text="Next"
+        app:layout_constraintTop_toBottomOf="@id/answer_1_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentSplash">
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="com.shivam.kotlin.appscriptask.ui.screens.FragmentSplash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_fragmentSplash_to_fragment12"
+            app:destination="@id/fragment12" />
+        <action
+            android:id="@+id/action_fragmentSplash_to_fragmentHistory"
+            app:destination="@id/fragmentHistory" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment12"
+        android:name="com.shivam.kotlin.appscriptask.ui.screens.Fragment1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1" >
+        <action
+            android:id="@+id/action_fragment12_to_fragment2"
+            app:destination="@id/fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGameOver"
+        android:name="com.shivam.kotlin.appscriptask.ui.screens.FragmentGameOver"
+        android:label="FragmentGameOver" >
+        <action
+            android:id="@+id/action_fragmentGameOver_to_fragmentHistory"
+            app:destination="@id/fragmentHistory" />
+        <argument
+            android:name="summary"
+            app:argType="com.shivam.kotlin.appscriptask.modal.Summary" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHistory"
+        android:name="com.shivam.kotlin.appscriptask.ui.screens.FragmentHistory"
+        android:label="Saved Games"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.shivam.kotlin.appscriptask.ui.screens.Fragment2"
+        android:label="Fragment2" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment3"
+            app:destination="@id/fragment3" />
+        <argument
+            android:name="summary"
+            app:argType="com.shivam.kotlin.appscriptask.modal.Summary" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.shivam.kotlin.appscriptask.ui.screens.Fragment3"
+        android:label="Fragment3" >
+        <action
+            android:id="@+id/action_fragment3_to_fragmentGameOver"
+            app:destination="@id/fragmentGameOver"
+            app:popUpTo="@id/fragmentSplash"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="summary"
+            app:argType="com.shivam.kotlin.appscriptask.modal.Summary" />
+    </fragment>
+</navigation>
